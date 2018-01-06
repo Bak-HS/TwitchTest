@@ -1,0 +1,29 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+$.ajax({
+    url: 'https://api.twitch.tv/kraken/channel',
+    type: 'GET',
+    contentType: 'application/json',
+    dataType: 'json',
+    headers: {
+      'Client-ID': 'xlldrm7qz1ygbvyzu6yc67umh72n96',
+      'Authorization': 'OAuth <your oauth token with channel_read scope>',
+      'Accept': 'application/vnd.twitchtv.v5+json'
+    },
+    success: function(data){
+    	console.log("success");
+    	return data;
+    },
+    error: function(data){
+    	console.log("failure");
+    }
+  });
+
+
+
+});
+
+</script>
